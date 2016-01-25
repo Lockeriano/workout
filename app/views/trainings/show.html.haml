@@ -2,3 +2,7 @@
 	%p= @training.date
 	%p= @training.workout
 	%p= @training.length
+
+	= link_to "Back", root_path
+	= link_to "Edit", edit_training_path(@training)
+	= link_to "Delete", training_path(@training), method: :delete, data: { confirm: "Are you sure?" }

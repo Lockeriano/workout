@@ -24,9 +24,16 @@ class TrainingsController < ApplicationController
 	end
 
 	def update
+		if @training.update(training_params)
+			redirect_to @training
+		else
+			render 'edit'
+		end
 	end
 
 	def destroy
+		@training.destroy
+		redirect_to root_path
 	end
 
 	private
