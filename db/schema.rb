@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20160125135730) do
   add_index "exercises", ["training_id"], name: "index_exercises_on_training_id"
 
   create_table "trainings", force: :cascade do |t|
-    t.time     "date"
+    t.datetime "date"
     t.string   "workout"
     t.string   "length"
     t.datetime "created_at", null: false
