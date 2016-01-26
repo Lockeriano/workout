@@ -1,5 +1,7 @@
 class TrainingsController < ApplicationController
 	before_action :find_training, only: [:show, :edit, :update, :destroy]
+
+
 	def index
 		@trainings = Training.all.order("created_at DESC")
 	end
